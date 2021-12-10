@@ -3,7 +3,6 @@
   "version": "1.0.0",
   "description": "Returns information about The Walking Dead TV Show",
   "main": "index.js",
-  "type": "module",
   "author": "John William Davis",
   "license": "MIT",
   "private": false,
