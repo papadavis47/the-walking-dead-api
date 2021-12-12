@@ -9,6 +9,10 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
 app.get("/", (req, res) => {
+  res.send('<h1>The Walking Dead REST API</h1><a href="/api/characters">Characters<a/>');
+});
+
+app.get("/api/characters", (req, res) => {
   res.json(characters);
 });
 
