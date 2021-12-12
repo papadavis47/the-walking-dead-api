@@ -15,6 +15,7 @@ const characters = [
     villain: false,
   },
   {
+    id: 3,
     name: "Michonne",
     playedBy: "Danai Gurira",
     seasonOfArrival: 3,

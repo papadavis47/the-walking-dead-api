@@ -16,4 +16,13 @@ app.get("/api/characters", (req, res) => {
   res.json(characters);
 });
 
+app.get("/api/characters/:characterId", (req, res) => {
+  const { characterId } = req.params;
+  const singleCharacter = characters.find((character) => character.id === Number(characterId));
+  if (!singleCharacter) {
+    res.status(404).send("Character not available");
+  }
+  return res.json(singleCharacter);
+});
+
 app.listen(PORT, () => console.log(`Listening on http://localhost:${PORT}. Oh Yeah Baby!`));
