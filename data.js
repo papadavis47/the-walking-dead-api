@@ -12,6 +12,7 @@ const characters = [
     name: "Rick Grimes",
     playedBy: "Andrew Lincoln",
     seasonOfArrival: 1,
+    weaponOfChoice: "pistol",
     villain: false,
   },
   {
@@ -20,6 +21,7 @@ const characters = [
     playedBy: "Danai Gurira",
     seasonOfArrival: 3,
     villain: false,
+    weaponOfChoice: "samurai sword",
   },
 ];
 
