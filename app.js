@@ -1,9 +1,10 @@
+require("dotenv").config();
+
 const express = require("express");
 const { characters } = require("./data.js");
 const charactersRouter = require("./routes/characters.js");
+const connectDB = require("./db/connect.js");
 const app = express();
-
-const PORT = 5001;
 
 // Setting up the file to serve the landing page on the domain
 app.use(express.static("./public"));
@@ -18,4 +19,16 @@ app.all("*", (req, res) => {
   res.status(404).send("Requested Resource Not Found");
 });
 
-app.listen(PORT, () => console.log(`Listening on http://localhost:${PORT}. Oh Yeah Baby!`));
+const port = process.env.PORT || 5001;
+
+const start = async () => {
+  try {
+    await connectDB(process.env.MONGO_URI);
+    console.log("Connected now to DB!!!");
+    app.listen(port, () => console.log(`Listening on http://localhost:${port}. Oh Yeah Baby!`));
+  } catch (error) {
+    console.log(error);
+  }
+};
+
+start();

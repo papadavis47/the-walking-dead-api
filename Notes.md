@@ -17,3 +17,11 @@ Next I am going to setup the `controllers` folder and put my functions in there.
 setup my `routes` folder.
 
 But I need to modularize even more so as I go through Smilga's course.
+
+> December 16, 2021
+
+This is cool:
+
+https://www.convertsimple.com/convert-javascript-to-json/
+
+---
