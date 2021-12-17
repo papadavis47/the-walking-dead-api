@@ -25,3 +25,33 @@ This is cool:
 https://www.convertsimple.com/convert-javascript-to-json/
 
 ---
+
+> December 17, 2021
+
+**Code Snippets to Save for Later - or for reference:**
+
+```js
+app.all("*", (req, res) => {
+  res.status(404).send("Requested Resource Not Found");
+});
+```
+
+```js
+router.get("/lookup", (req, res) => {
+  const { search, limit } = req.query;
+  let queriedCharacters = [...characters];
+  if (search) {
+    queriedCharacters = characters.filter((character) => {
+      return character.name.startsWith(search);
+    });
+  }
+
+  if (limit) {
+    queriedCharacters.slice(0, Number(limit));
+  }
+  if (queriedCharacters < 1) {
+    return res.status(200).json({ success: true, data: [] });
+  }
+  res.status(200).json(queriedCharacters);
+});
+```

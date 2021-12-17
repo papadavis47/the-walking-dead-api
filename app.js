@@ -1,7 +1,7 @@
 require("dotenv").config();
 
 const express = require("express");
-const { characters } = require("./data.js");
+// const { characters } = require("./data.js");
 const charactersRouter = require("./routes/characters.js");
 const connectDB = require("./db/connect.js");
 const app = express();
@@ -14,10 +14,6 @@ app.use(express.json());
 
 // Setting up my imported routes
 app.use("/api/v1/characters", charactersRouter);
-
-app.all("*", (req, res) => {
-  res.status(404).send("Requested Resource Not Found");
-});
 
 const port = process.env.PORT || 5001;
 

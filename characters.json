@@ -1,0 +1,26 @@
+[
+  {
+    "name": "Negan",
+    "shortDescription": "Arch Nemesis of Rick Grimes, murderer of Glenn",
+    "playedBy": "Jeffrey Dean Morgan",
+    "seasonOfArrival": 5,
+    "isVillain": true,
+    "weaponOfChoice": "baseball bat"
+  },
+  {
+    "name": "Rick Grimes",
+    "shortDescription": "Hero of the story, former sheriff, leader",
+    "playedBy": "Andrew Lincoln",
+    "seasonOfArrival": 1,
+    "weaponOfChoice": "pistol",
+    "isVillain": false
+  },
+  {
+    "name": "Michonne",
+    "shortDescription": "A broken ghost to begin with, evolves to Rick's partner",
+    "playedBy": "Danai Gurira",
+    "seasonOfArrival": 3,
+    "isVillain": false,
+    "weaponOfChoice": "samurai sword"
+  }
+]
