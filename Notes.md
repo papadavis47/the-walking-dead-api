@@ -66,3 +66,5 @@ router.get("/:characterId", (req, res) => {
   return res.json(singleCharacter);
 });
 ```
+
+---

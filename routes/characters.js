@@ -8,8 +8,6 @@ const {
   deleteCharacter,
 } = require("../controllers/characters.js");
 
-// const { characters } = require("../data.js");
-
 router.route("/").get(getAllCharacters).post(postCharacter);
 router.route("/:id").get(getSingleCharacter).patch(updateCharacter).delete(deleteCharacter);
 
