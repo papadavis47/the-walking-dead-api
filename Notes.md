@@ -55,3 +55,14 @@ router.get("/lookup", (req, res) => {
   res.status(200).json(queriedCharacters);
 });
 ```
+
+```js
+router.get("/:characterId", (req, res) => {
+  const { characterId } = req.params;
+  const singleCharacter = characters.find((character) => character.id === Number(characterId));
+  if (!singleCharacter) {
+    res.status(404).send("Character not available");
+  }
+  return res.json(singleCharacter);
+});
+```
