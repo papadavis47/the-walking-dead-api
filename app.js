@@ -2,6 +2,7 @@ require("dotenv").config();
 require("express-async-errors");
 
 const express = require("express");
+const path = require("path");
 const errorHandlerMiddleware = require("./middleware/error-handler.js");
 const notFound = require("./middleware/not-found.js");
 const charactersRouter = require("./routes/characters.js");
